@@ -1,0 +1,5 @@
+<h1> <%= @teacher.name %> </h1>
+<h3> Age: <%= @teacher.age %> </h3>
+<h3> School: <%= link_to(@teacher.school.name, school_path(@teacher.school.id))%> </h3>
+<%= button_to("Edit #{@teacher.name}", edit_teacher_path(@teacher.id), method: "get")%>
+

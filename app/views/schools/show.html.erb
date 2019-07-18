@@ -1,6 +1,17 @@
 <h1><%= link_to "#{@school.name}", @school.link %></h1>
-<h2>Students</h2>
 
+<h2>Teachers</h2>
+<ul>
+  <% @school.teachers.each do |t|%>
+  <li>
+    <%= link_to(t.name, teacher_path(t.id)) %>
+    <%= button_to("Fire #{t.name}", teacher_path(t.id), method: "delete") %>
+    <br />
+  </li>
+  <% end %>
+</ul>
+
+<h2>Students</h2>
 <ul>
   <% @school.students.each do |s|%>
   <li>
