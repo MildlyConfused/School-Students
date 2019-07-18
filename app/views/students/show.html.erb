@@ -1,0 +1,6 @@
+<h1><%= @student.name %></h1>
+
+<h3>Age: <%= @student.age %></h3>
+<h3>School: <%= @student.school.name %></h3>
+
+<%= button_to("Edit your account", edit_student_path(@student.id), method: "get")%>

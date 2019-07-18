@@ -1,0 +1,11 @@
+<h1>Create a new student</h1>
+
+<%= form_for @student do |f| %>
+<%= f.label :name, "Name:" %>
+<%= f.text_field :name %>
+<%= f.label :age, "Age:" %>
+<%= f.number_field :age %>
+<%= f.collection_select :school_id, @schools, :id, :name, prompt: "Select a School"%>
+<%= f.submit "Submit" %>
+
+<% end %>

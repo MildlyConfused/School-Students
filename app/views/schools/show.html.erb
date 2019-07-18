@@ -1,2 +1,15 @@
-<h1>School#show</h1>
-<p>Find me in app/views/school/show.html.erb</p>
+<h1><%= @school.name %></h1>
+
+<h3>Students</h3>
+
+<ul>
+  <% @school.students.each do |s|%>
+  <li>
+    <%= s.name %> <%= button_to("Expell #{s.name}", student_path(s.id), method:
+    "delete") %>
+    <br />
+  </li>
+  <% end %>
+</ul>
+
+<h3>Search for Student</h3>
