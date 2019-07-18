@@ -5,8 +5,7 @@
   <% @school.students.each do |s|%>
   <li>
     <%= link_to(s.name, student_path(s.id)) %>
-    <%= button_to("Expell #{s.name}", student_path(s.id), method:
-    "delete") %>
+    <%= button_to("Expel #{s.name}", student_path(s.id), method: "delete") %>
     <br />
   </li>
   <% end %>
