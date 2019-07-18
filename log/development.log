@@ -2838,3 +2838,205 @@ Processing by SchoolsController#index as HTML
 Completed 200 OK in 57ms (Views: 52.5ms | ActiveRecord: 0.2ms)
 
 
+Started GET "/schools/1" for ::1 at 2019-07-18 17:10:38 -0400
+  [1m[35m (1.2ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ /Users/flatironschool/.rvm/gems/ruby-2.6.1/gems/activerecord-5.2.3/lib/active_record/log_subscriber.rb:98
+Processing by SchoolsController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mSchool Load (1.4ms)[0m  [1m[34mSELECT  "schools".* FROM "schools" WHERE "schools"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/schools_controller.rb:7
+  Rendering schools/show.html.erb within layouts/application
+  [1m[36mStudent Load (1.4ms)[0m  [1m[34mSELECT "students".* FROM "students" WHERE "students"."school_id" = ?[0m  [["school_id", 1]]
+  ↳ app/views/schools/show.html.erb:5
+  Rendered schools/show.html.erb within layouts/application (146.1ms)
+Completed 200 OK in 575ms (Views: 508.8ms | ActiveRecord: 4.6ms)
+
+
+Started GET "/schools/3" for ::1 at 2019-07-18 17:10:48 -0400
+Processing by SchoolsController#show as HTML
+  Parameters: {"id"=>"3"}
+  [1m[36mSchool Load (0.2ms)[0m  [1m[34mSELECT  "schools".* FROM "schools" WHERE "schools"."id" = ? LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/controllers/schools_controller.rb:7
+  Rendering schools/show.html.erb within layouts/application
+  [1m[36mStudent Load (0.2ms)[0m  [1m[34mSELECT "students".* FROM "students" WHERE "students"."school_id" = ?[0m  [["school_id", 3]]
+  ↳ app/views/schools/show.html.erb:5
+  Rendered schools/show.html.erb within layouts/application (3.9ms)
+Completed 200 OK in 100ms (Views: 94.9ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/schools/5" for ::1 at 2019-07-18 17:10:52 -0400
+Processing by SchoolsController#show as HTML
+  Parameters: {"id"=>"5"}
+  [1m[36mSchool Load (0.5ms)[0m  [1m[34mSELECT  "schools".* FROM "schools" WHERE "schools"."id" = ? LIMIT ?[0m  [["id", 5], ["LIMIT", 1]]
+  ↳ app/controllers/schools_controller.rb:7
+  Rendering schools/show.html.erb within layouts/application
+  [1m[36mStudent Load (0.2ms)[0m  [1m[34mSELECT "students".* FROM "students" WHERE "students"."school_id" = ?[0m  [["school_id", 5]]
+  ↳ app/views/schools/show.html.erb:5
+  Rendered schools/show.html.erb within layouts/application (3.6ms)
+Completed 200 OK in 87ms (Views: 81.0ms | ActiveRecord: 0.7ms)
+
+
+Started GET "/schools/5" for ::1 at 2019-07-18 17:14:44 -0400
+Processing by SchoolsController#show as HTML
+  Parameters: {"id"=>"5"}
+  [1m[36mSchool Load (0.2ms)[0m  [1m[34mSELECT  "schools".* FROM "schools" WHERE "schools"."id" = ? LIMIT ?[0m  [["id", 5], ["LIMIT", 1]]
+  ↳ app/controllers/schools_controller.rb:7
+  Rendering schools/show.html.erb within layouts/application
+  [1m[36mStudent Load (0.3ms)[0m  [1m[34mSELECT "students".* FROM "students" WHERE "students"."school_id" = ?[0m  [["school_id", 5]]
+  ↳ app/views/schools/show.html.erb:5
+  Rendered schools/show.html.erb within layouts/application (4.3ms)
+Completed 200 OK in 63ms (Views: 58.9ms | ActiveRecord: 0.6ms)
+
+
+Started GET "/students/2" for ::1 at 2019-07-18 17:14:47 -0400
+Processing by StudentsController#show as HTML
+  Parameters: {"id"=>"2"}
+  [1m[36mStudent Load (0.3ms)[0m  [1m[34mSELECT  "students".* FROM "students" WHERE "students"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/students_controller.rb:7
+  Rendering students/show.html.erb within layouts/application
+  [1m[36mSchool Load (0.1ms)[0m  [1m[34mSELECT  "schools".* FROM "schools" WHERE "schools"."id" = ? LIMIT ?[0m  [["id", 5], ["LIMIT", 1]]
+  ↳ app/views/students/show.html.erb:4
+  Rendered students/show.html.erb within layouts/application (7.6ms)
+Completed 200 OK in 45ms (Views: 36.8ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/schools/5" for ::1 at 2019-07-18 17:14:53 -0400
+Processing by SchoolsController#show as HTML
+  Parameters: {"id"=>"5"}
+  [1m[36mSchool Load (0.2ms)[0m  [1m[34mSELECT  "schools".* FROM "schools" WHERE "schools"."id" = ? LIMIT ?[0m  [["id", 5], ["LIMIT", 1]]
+  ↳ app/controllers/schools_controller.rb:7
+  Rendering schools/show.html.erb within layouts/application
+  [1m[36mStudent Load (0.3ms)[0m  [1m[34mSELECT "students".* FROM "students" WHERE "students"."school_id" = ?[0m  [["school_id", 5]]
+  ↳ app/views/schools/show.html.erb:5
+  Rendered schools/show.html.erb within layouts/application (4.5ms)
+Completed 200 OK in 80ms (Views: 77.1ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/students/2" for ::1 at 2019-07-18 17:14:55 -0400
+Processing by StudentsController#show as HTML
+  Parameters: {"id"=>"2"}
+  [1m[36mStudent Load (0.1ms)[0m  [1m[34mSELECT  "students".* FROM "students" WHERE "students"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/students_controller.rb:7
+  Rendering students/show.html.erb within layouts/application
+  [1m[36mSchool Load (0.6ms)[0m  [1m[34mSELECT  "schools".* FROM "schools" WHERE "schools"."id" = ? LIMIT ?[0m  [["id", 5], ["LIMIT", 1]]
+  ↳ app/views/students/show.html.erb:4
+  Rendered students/show.html.erb within layouts/application (3.5ms)
+Completed 200 OK in 57ms (Views: 54.2ms | ActiveRecord: 0.7ms)
+
+
+Started GET "/students/2" for ::1 at 2019-07-18 17:16:14 -0400
+Processing by StudentsController#show as HTML
+  Parameters: {"id"=>"2"}
+  [1m[36mStudent Load (0.2ms)[0m  [1m[34mSELECT  "students".* FROM "students" WHERE "students"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/students_controller.rb:7
+  Rendering students/show.html.erb within layouts/application
+  Rendered students/show.html.erb within layouts/application (1.3ms)
+Completed 200 OK in 37ms (Views: 33.3ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/students/2" for ::1 at 2019-07-18 17:16:32 -0400
+Processing by StudentsController#show as HTML
+  Parameters: {"id"=>"2"}
+  [1m[36mStudent Load (0.3ms)[0m  [1m[34mSELECT  "students".* FROM "students" WHERE "students"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/students_controller.rb:7
+  Rendering students/show.html.erb within layouts/application
+  Rendered students/show.html.erb within layouts/application (1.3ms)
+Completed 200 OK in 44ms (Views: 40.5ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/students/2" for ::1 at 2019-07-18 17:16:45 -0400
+Processing by StudentsController#show as HTML
+  Parameters: {"id"=>"2"}
+  [1m[36mStudent Load (0.2ms)[0m  [1m[34mSELECT  "students".* FROM "students" WHERE "students"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/students_controller.rb:7
+  Rendering students/show.html.erb within layouts/application
+  [1m[36mSchool Load (0.2ms)[0m  [1m[34mSELECT  "schools".* FROM "schools" WHERE "schools"."id" = ? LIMIT ?[0m  [["id", 5], ["LIMIT", 1]]
+  ↳ app/views/students/show.html.erb:5
+  Rendered students/show.html.erb within layouts/application (3.7ms)
+Completed 200 OK in 47ms (Views: 43.2ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/students/2" for ::1 at 2019-07-18 17:16:47 -0400
+Processing by StudentsController#show as HTML
+  Parameters: {"id"=>"2"}
+  [1m[36mStudent Load (0.4ms)[0m  [1m[34mSELECT  "students".* FROM "students" WHERE "students"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/students_controller.rb:7
+  Rendering students/show.html.erb within layouts/application
+  [1m[36mSchool Load (0.3ms)[0m  [1m[34mSELECT  "schools".* FROM "schools" WHERE "schools"."id" = ? LIMIT ?[0m  [["id", 5], ["LIMIT", 1]]
+  ↳ app/views/students/show.html.erb:5
+  Rendered students/show.html.erb within layouts/application (4.5ms)
+Completed 200 OK in 118ms (Views: 113.3ms | ActiveRecord: 0.7ms)
+
+
+Started GET "/students/2" for ::1 at 2019-07-18 17:16:50 -0400
+Processing by StudentsController#show as HTML
+  Parameters: {"id"=>"2"}
+  [1m[36mStudent Load (0.1ms)[0m  [1m[34mSELECT  "students".* FROM "students" WHERE "students"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/students_controller.rb:7
+  Rendering students/show.html.erb within layouts/application
+  [1m[36mSchool Load (0.4ms)[0m  [1m[34mSELECT  "schools".* FROM "schools" WHERE "schools"."id" = ? LIMIT ?[0m  [["id", 5], ["LIMIT", 1]]
+  ↳ app/views/students/show.html.erb:5
+  Rendered students/show.html.erb within layouts/application (4.9ms)
+Completed 200 OK in 56ms (Views: 53.1ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/students/2" for ::1 at 2019-07-18 17:17:37 -0400
+Processing by StudentsController#show as HTML
+  Parameters: {"id"=>"2"}
+  [1m[36mStudent Load (0.2ms)[0m  [1m[34mSELECT  "students".* FROM "students" WHERE "students"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/students_controller.rb:7
+  Rendering students/show.html.erb within layouts/application
+  [1m[36mSchool Load (0.3ms)[0m  [1m[34mSELECT  "schools".* FROM "schools" WHERE "schools"."id" = ? LIMIT ?[0m  [["id", 5], ["LIMIT", 1]]
+  ↳ app/views/students/show.html.erb:5
+  Rendered students/show.html.erb within layouts/application (3.8ms)
+Completed 200 OK in 37ms (Views: 33.1ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/schools/5" for ::1 at 2019-07-18 17:17:39 -0400
+Processing by SchoolsController#show as HTML
+  Parameters: {"id"=>"5"}
+  [1m[36mSchool Load (0.2ms)[0m  [1m[34mSELECT  "schools".* FROM "schools" WHERE "schools"."id" = ? LIMIT ?[0m  [["id", 5], ["LIMIT", 1]]
+  ↳ app/controllers/schools_controller.rb:7
+  Rendering schools/show.html.erb within layouts/application
+  [1m[36mStudent Load (0.2ms)[0m  [1m[34mSELECT "students".* FROM "students" WHERE "students"."school_id" = ?[0m  [["school_id", 5]]
+  ↳ app/views/schools/show.html.erb:5
+  Rendered schools/show.html.erb within layouts/application (3.5ms)
+Completed 200 OK in 88ms (Views: 81.9ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/students/2" for ::1 at 2019-07-18 17:17:41 -0400
+Processing by StudentsController#show as HTML
+  Parameters: {"id"=>"2"}
+  [1m[36mStudent Load (0.2ms)[0m  [1m[34mSELECT  "students".* FROM "students" WHERE "students"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/students_controller.rb:7
+  Rendering students/show.html.erb within layouts/application
+  [1m[36mSchool Load (0.2ms)[0m  [1m[34mSELECT  "schools".* FROM "schools" WHERE "schools"."id" = ? LIMIT ?[0m  [["id", 5], ["LIMIT", 1]]
+  ↳ app/views/students/show.html.erb:5
+  Rendered students/show.html.erb within layouts/application (6.7ms)
+Completed 200 OK in 56ms (Views: 51.7ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/schools/5" for ::1 at 2019-07-18 17:17:42 -0400
+Processing by SchoolsController#show as HTML
+  Parameters: {"id"=>"5"}
+  [1m[36mSchool Load (0.2ms)[0m  [1m[34mSELECT  "schools".* FROM "schools" WHERE "schools"."id" = ? LIMIT ?[0m  [["id", 5], ["LIMIT", 1]]
+  ↳ app/controllers/schools_controller.rb:7
+  Rendering schools/show.html.erb within layouts/application
+  [1m[36mStudent Load (0.2ms)[0m  [1m[34mSELECT "students".* FROM "students" WHERE "students"."school_id" = ?[0m  [["school_id", 5]]
+  ↳ app/views/schools/show.html.erb:5
+  Rendered schools/show.html.erb within layouts/application (5.1ms)
+Completed 200 OK in 57ms (Views: 50.9ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/students/2" for ::1 at 2019-07-18 17:17:46 -0400
+Processing by StudentsController#show as HTML
+  Parameters: {"id"=>"2"}
+  [1m[36mStudent Load (0.2ms)[0m  [1m[34mSELECT  "students".* FROM "students" WHERE "students"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/students_controller.rb:7
+  Rendering students/show.html.erb within layouts/application
+  [1m[36mSchool Load (0.2ms)[0m  [1m[34mSELECT  "schools".* FROM "schools" WHERE "schools"."id" = ? LIMIT ?[0m  [["id", 5], ["LIMIT", 1]]
+  ↳ app/views/students/show.html.erb:5
+  Rendered students/show.html.erb within layouts/application (4.3ms)
+Completed 200 OK in 110ms (Views: 107.2ms | ActiveRecord: 0.4ms)
+
+
