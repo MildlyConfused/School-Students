@@ -1,6 +1,5 @@
-<h1><%= @school.name %></h1>
-
-<h3>Students</h3>
+<h1><%= link_to "#{@school.name}", @school.link %></h1>
+<h2>Students</h2>
 
 <ul>
   <% @school.students.each do |s|%>
@@ -12,4 +11,4 @@
   <% end %>
 </ul>
 
-<h3>Search for Student</h3>
+<h2>Search for Student</h2>
